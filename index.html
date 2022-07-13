@@ -204,6 +204,27 @@
                 <div class="punto"></div>
             </ul>
         </div>
+        <!--Comienzo lista de personajes-->
+        
+        <!--Comienzo de Formulario-->
+        <form action="index.js" method="POST" class="form">
+            <h2 class="formulario-titulo">Contactemos</h2>
+                <label for="full-name" class="contact-name">Nombre y Apellido</label>
+                <input type="text" id="full-name" placeholder="Ej: Maria Perez" name="nombre" required>
+            
+            
+                <label for="email" class="contact-name">Email</label>
+                <input type="email" id="email" placeholder="Ej: ejemplo@gmail.com" name="email" required>
+        
+            
+                <label for="abstract" class="contact-name">Mensaje</label>
+                <textarea name="textarea" id="abstract"></textarea>
+                <p class="instructions">Describe your talk in 500 words or less</p>
+            
+            
+                <button type="submit">Enviar</button>
+            
+    </form>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="javascript/index.js"></script>

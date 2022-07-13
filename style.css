@@ -173,3 +173,52 @@
 .carrusel .punto.activo {
     background-color: rgb(66, 66, 66);
 }
+
+/* Formulario*/
+form{
+    width: 500px;
+    max-width: 100%;
+    margin: auto;
+    margin-top: 30px;
+    padding: 20px;
+    position: relative;
+}
+
+.formulario-titulo{
+    text-align: center;
+    margin-top: 0;
+    color: white;
+    margin-bottom: 50px;
+
+}
+
+input{
+    display: block;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+label{
+    margin: auto;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    color: white;
+}
+
+textarea{
+    min-height: 100px;
+    min-width: 100%;
+    resize: none;
+
+}
+
+button{
+    width: 30%;
+
+}
+button:hover{
+    background-color: lightblue;
+}
+/*Fin Formulario
