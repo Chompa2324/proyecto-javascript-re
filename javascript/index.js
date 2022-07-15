@@ -1,6 +1,6 @@
 'use strict'
-const grande = document.querySelector('.grande')
-const punto = document.querySelectorAll('.punto')
+const grande = document.querySelector('.grande');
+const punto = document.querySelectorAll('.punto');
 
 punto.forEach((cadaPunto, i) => {
     punto[i].addEventListener('click',() =>{
@@ -18,3 +18,18 @@ punto.forEach((cadaPunto, i) => {
     });
 
 });
+
+
+let input = document.getElementsByClassName('formulario-input');
+for (let i = 0; i < input.length; i++) {
+    input[i].addEventListener('keyup', function(){
+        if(this.value.length >=1){
+            this.nextElementSibling.classList.add('fijar');
+        }else {
+            this.nextElementSibling.classList.remove('fijar');
+        }
+    });
+}
+
+
+
