@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Meta Description-->
+    <meta name="description" content="Somos Resident Evil Fanpage, es un sitio web basado en la saga de videos juegos Resident Evil, en el que mostraremos un poco la historia detras de la saga, juegos que han salido y muchas otras cosas mas que van a interiorizarte aun mas en una de las historias mas atrapantes en el mundo de survive horror.">
+    <!--Meta Kw-->
+    <meta name="keywords" content="resident evil, nemesis, leon kennedy, chris redfield, juegos, playstation 4, playstation 5.">
+    <!--Open Graph-->
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="Informacion de la saga mas importante del survive horror."/>
+    <meta property="og:description" content="Resident Evil Fanpage, el horror esta viniendo."/>
+    <meta property="og:url" content="www.residentevilfanpage.com"/>
+    <meta property="og:image" content="imagenes/residentevil.ico"/>
+    <title>Home | Resident Evil Fanpage</title>
+    <!--Logo de la Pestaña-->
+    <link rel="shortcut icon" href="LogoMakr-3FKL1C.png" type="image/x-icon">
+    <!--BOOTSTRAP-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <div><a href="index.html"><h4>Volver</h4></a></div>
+        </nav>
+    </header>
+
+<!--Productos Video Juegos PS4-->
+<div class="container">
+    <div class="row">
+        <!-- Elementos generados a partir del JSON -->
+        <main id="items" class="col-sm-8 row"></main>
+        <!-- Carrito -->
+        <aside class="col-sm-4">
+            <h2>Carrito</h2>
+            <!-- Elementos del carrito -->
+            <ul id="carrito" class="list-group"></ul>
+            <hr>
+            <!-- Precio total -->
+            <p class="text-right">Total: $<span id="total"></span></p>
+            <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+        </aside>
+    </div>
+</div>
+<!--Fin Productos Video Juegos PS4-->
+
+
+<script src="/javascript/productos.js"></script>
+
+</body>
+</html>
