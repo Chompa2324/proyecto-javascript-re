@@ -31,5 +31,10 @@ for (let i = 0; i < input.length; i++) {
     });
 }
 
+Swal.fire(
+    'Sos mayor de edad?',
+    'Esta pagina contiene material violento',
+    'warning'
+) 
 
 
