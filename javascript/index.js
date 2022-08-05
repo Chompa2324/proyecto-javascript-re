@@ -1,3 +1,4 @@
+//Carrusel de Imagenes--------------------------------------------------------------
 'use strict'
 const grande = document.querySelector('.grande');
 const punto = document.querySelectorAll('.punto');
@@ -19,7 +20,7 @@ punto.forEach((cadaPunto, i) => {
 
 });
 
-
+//Formulario-----------------------------------------------------------------------
 let input = document.getElementsByClassName('formulario-input');
 for (let i = 0; i < input.length; i++) {
     input[i].addEventListener('keyup', function(){
@@ -31,10 +32,32 @@ for (let i = 0; i < input.length; i++) {
     });
 }
 
+
+//Libreria de Advertencia----------------------------------------------------------
 Swal.fire(
     'Advertencia sobre la pagina',
     'Esta pagina contiene material violento',
     'warning'
 ) 
+
+
+//AJAX - Fetch en el proyecto------------------------------------------------------
+const history = document.getElementById("history");
+
+fetch('./data.json')
+    .then( (response) => response.json())
+    .then( (data) => {
+        data.forEach(elemento => {
+            const li = document.createElement('li');
+            li.innerHTML = `
+            <h2>${elemento.nombre} </h2>
+            <p>Personaje ${elemento.id} </p>
+            <p>${elemento.historia} </p>
+            
+            <hr/>
+            `;
+            history.append(li);
+        });
+    })
 
 
