@@ -21,32 +21,32 @@ const baseDeDatos = [
         id: 4,
         nombre: 'Resident Evil 4',
         precio: 1200,
-        imagen: './playstation/re4.jpg'
+        imagen: './playstation/re4.jpg',
     },
     {
         id: 5,
         nombre: 'Resident Evil 5',
         precio: 2200,
-        imagen: './playstation/re5.jpg'
+        imagen: './playstation/re5.jpg',
     },
     {
         id: 6,
         nombre: 'Resident Evil 6',
         precio: 1500,
-        imagen: './playstation/re6.jpg'
+        imagen: './playstation/re6.jpg',
     },
     {
         id: 7,
         nombre: 'Resident Evil 7',
         precio: 3500,
-        imagen: './playstation/re7.jpg'
+        imagen: './playstation/re7.jpg',
     },
     {
         id: 8,
         nombre: 'Resident Evil 8',
         precio: 12000,
-        imagen: './playstation/re8.jpg'
-    }
+        imagen: './playstation/re8.jpg',
+    },
 
 ];
 
