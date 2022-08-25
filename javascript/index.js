@@ -82,3 +82,12 @@ window.onscroll = function(){
     }
 }
 
+
+//Iluminacion----------------------------------------------------------------------
+const btnSwitch = document.getElementById("switch");
+
+btnSwitch.addEventListener("click", () => {
+    document.body.classList.toggle("white");
+    btnSwitch.classList.toggle("activo");
+});
+

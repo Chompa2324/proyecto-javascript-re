@@ -1,14 +1,19 @@
-/*lo primero*/
+/*LO PRIMERO*/
 * {
     margin: 0;
     padding: 0;
 }
 
 .body {
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(39, 39, 39);
+    transition: .3s ease all;
 }
-/*navbar*/
+.body.white{
+    background: rgb(209, 208, 208);
+}
 
+
+/*Navbar*/
 .imagen-primera {
     margin: auto;
     padding-bottom: 20px;
@@ -22,7 +27,7 @@
     padding: 20px;
     display: flex;
     justify-content: center;
-    border: 5px solid rgb(68, 68, 68);
+    border: 5px solid rgb(0, 0, 0);
     border-radius: 10px
 }
 
@@ -30,8 +35,6 @@
     width: 70%;
     display: flex;
     justify-content: space-around;
-    
-
 }
 
 .nav a {
@@ -39,9 +42,9 @@
     color: black;
     font-size: 20px;
     color: white;
-
 }
 /*FIN NAVBAR*/
+
 
 /*TEXTO DE IMAGEN CENTRAL*/
 .card-title {
@@ -56,9 +59,9 @@
     display: flex;
     justify-content: center;
     font-size:x-large;
-
 }
 /*FIN DE TEXTO DE IMAGEN CENTRAL*/
+
 
 /*SOBRE NOSOTROS*/  
 .titulo-2 {
@@ -68,7 +71,7 @@
     font-size: 40px;
     text-decoration: overline;
     background-color: rgb(71, 8, 8);
-    border: 5px solid rgb(68, 68, 68);
+    border: 5px solid rgb(0, 0, 0);
     color: white;
     border-radius: 10px
 }
@@ -115,16 +118,19 @@
 
 .titulo-3{
     padding: 20px;
-    margin: 10px auto;
+    margin: 20px auto;
     text-align: center;
     font-size: 40px;
     text-decoration: overline;
     background-color: rgb(71, 8, 8);
     color: white;
-    border: 5px solid rgb(68, 68, 68);
+    border: 5px solid rgb(0, 0, 0);
     border-radius: 10px
 }
+/*FiIN SOBRE NOSOTROS*/
 
+
+/*COMIENZO CARRUSEL*/
 .carrusel {
     width: 90%;
     max-width: 120em;
@@ -178,15 +184,30 @@
 .carrusel .punto.activo {
     background-color: rgb(66, 66, 66);
 }
+/*FIN CARRUSEL*/
 
-/* Formulario*/
+
+/*FETCH*/
+#history{
+    color: white;
+    text-align: justify;
+    margin-right: 30px;
+    font-size: 20px;
+}
+.body.white #history{
+    color: black;
+}
+/*FIN FETCH*/
+
+
+/*COMIENZO FORMULARIO*/
 .formulario{
     width: 500px;
     max-width: 100%;
     margin: auto;
     margin-top: 30px;
     padding: 20px;
-    box-shadow: 0 0 20px 1px white;
+    box-shadow: 0 0 20px 1px rgb(5, 5, 5);
     position: relative;
 }
 
@@ -197,16 +218,19 @@
     color: white;
 }
 
+.body.white .formulario-titulo{
+    color: black;
+}
+
 .formulario-input, .formulario-label, .formulario-submit{
 display: block;
 width: 100%;
 font-size: 1.3em;
-
 }
 
 .formulario-input{
     padding: 14px;
-    border: 1px solid rgb(255, 251, 251);
+    border: 1px solid rgb(12, 12, 12);
     margin-bottom: 40px;
     background: rgba(168, 6, 31, 0.5);
     border-radius: 5px;
@@ -215,6 +239,7 @@ font-size: 1.3em;
 .formulario-input:focus{
     outline: 1px solid rgba(0, 0, 0, 0.7);
 }
+
 .formulario-input:focus + .formulario-label{
     margin-top: -135px;
 }
@@ -223,8 +248,11 @@ font-size: 1.3em;
     position: absolute;
     margin-top: -85px;
     z-index: -20;
-    color: rgb(255, 255, 255);
+    color: rgb(255, 253, 253);
     transition: all 0.2s;
+}
+.body.white .formulario-label{
+    color: black;
 }
 
 .formulario-submit{
@@ -241,10 +269,10 @@ font-size: 1.3em;
 .fijar {
     margin-top: -135px;
 }
-/*Fin Formulario*/
+/*FFIN FORMULARIO*/
 
-/*Boton para Arriba*/
 
+/*COMIENZO BOTON VUELVE HACIA ARRIBA*/
 #button-up{
     width: 60px;
     height: 60px;
@@ -268,10 +296,13 @@ font-size: 1.3em;
     transform: scale(1.1);
     border-color: rgba(0,0,0,0.1);
 }
-/*Comienzo Footer*/
+/*FIN BOTON VUELVE HACIA ARRIBA*/
+
+
+/*COMIENZO FOOTER*/
 footer{
     margin-top: 30px;
-    border: 5px solid rgb(68, 68, 68);
+    border: 5px solid rgb(0, 0, 0);
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -288,14 +319,48 @@ footer{
 .box1{
     text-align: center;
 }
-/*Fin Footer*/
+/*FIN FOOTER*/
 
-/*Fetch*/
-#history{
-    color: white;
-    text-align: justify;
-    margin-right: 30px;
-    font-size: 20px;
+
+/*COMIENZO BOTON CAMBIA FONDO*/
+.switch{
+    background: #343D58;
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none;
 }
-/*Fin Fetch*/
 
+.switch::after{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: #f1f1f1;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 100px;
+    transition: .3s ease all;
+    box-shadow: 0px 0px 2px 2px rgba(0,0,0,.2);
+}
+
+.switch.activo::after{
+    background: orange;
+    color: black;
+    right: 0;
+    left: unset;
+}
+
+span{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    background: none;
+    color: #fff;
+}
+/*FIN BOTON CAMBIA FONDO*/

@@ -1,9 +1,16 @@
+/*LO PRIMERO*/
 *{
     margin: 0;
     padding: 0;
 }
 
-/*navbar*/
+.body{
+    background-color: rgb(39, 39, 39);
+    transition: .3s ease all;
+}
+
+
+/*COMIENZO NAVBAR*/
 
 .imagen-primera {
     margin: auto;
@@ -19,7 +26,7 @@
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
-    border: 5px solid rgb(68, 68, 68);
+    border: 5px solid rgb(0, 0, 0);
     border-radius: 10px
 }
 
@@ -27,8 +34,6 @@
     width: 70%;
     display: flex;
     justify-content: space-around;
-    
-
 }
 
 .nav a {
@@ -36,24 +41,14 @@
     color: black;
     font-size: 20px;
     color: white;
-
 }
 /*FIN NAVBAR*/
 
-/*Pagina Productos Ps4*/
-.volver{
-    color: black;
-    text-decoration: overline;
-    margin-top: 30px;
-    padding: 20px;
-    font-size: 20px;
 
-}
-
-/*Comienzo Footer*/
+/*COMIENZO FOOTER*/
 footer{
     margin-top: 30px;
-    border: 5px solid rgb(68, 68, 68);
+    border: 5px solid rgb(0, 0, 0);
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -70,4 +65,13 @@ footer{
 .box1{
     text-align: center;
 }
-/*Fin Footer*/
+/*FIN FOOTER*/
+
+
+/*CAMBIO COLOR LETRAS CALCULAR PRECIO Y TOTAL*/
+.col-sm-4{
+    color: rgb(0, 0, 0);
+}
+/*FIN CAMBIO COLOR LETRAS CALCULAR PRECIO Y TOTAL*/
+
+
