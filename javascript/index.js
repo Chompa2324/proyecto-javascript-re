@@ -20,6 +20,7 @@ punto.forEach((cadaPunto, i) => {
 
 });
 
+
 //Formulario-----------------------------------------------------------------------
 let input = document.getElementsByClassName('formulario-input');
 for (let i = 0; i < input.length; i++) {
@@ -40,6 +41,7 @@ Swal.fire(
     'warning'
 )
 
+
 //AJAX - Fetch seccion Enemigos en el proyecto-------------------------------------
 const history = document.getElementById("history");
 
@@ -58,6 +60,8 @@ fetch('./data.json')
         });
     })
 
+
+    //Fetch de Seccion La Saga---------------------------------------------------------
 const videogames = document.getElementById("videojuegos");
 
 fetch('./videogames.json')
@@ -85,6 +89,8 @@ fetch('./videogames.json')
         });
     })
 
+
+    //Fetch Lista de Personajes------------------------------------------------------------
 const tbody = document.getElementById("tabla");
 
 fetch('./tabla.json')
@@ -94,7 +100,7 @@ fetch('./tabla.json')
             const tr = document.createElement('tr');
             const th = document.createElement('th');
 
-            const td1 = document.createElement('td  ');
+            const td1 = document.createElement('td');
             const td2 = document.createElement('td');
             const td3 = document.createElement('td');
 
@@ -110,12 +116,13 @@ fetch('./tabla.json')
 
             td3.innerText = elemento.edad;
             tr.append(td3)
- 
+
             tbody.append(tr)
         });
     })
 
-//Boton que nos lleva hacia arriba-------------------------------------------------
+
+    //Boton que nos lleva hacia arriba-------------------------------------------------
 document.getElementById("button-up").addEventListener("click", scrollUp);
 
 function scrollUp() {
@@ -144,4 +151,3 @@ btnSwitch.addEventListener("click", () => {
     document.body.classList.toggle("white");
     btnSwitch.classList.toggle("activo");
 });
-

@@ -166,15 +166,17 @@ let carrito = [];
             };
 
             DOMbotonVaciar.addEventListener('click', vaciarCarrito);
+            
             DOMbotonEnviar.addEventListener('click', ()=>{
-                Swal.fire({
-                    position: 'top-end',
-                    icon: 'success',
-                    title: 'La compra fue realizada con exito!',
-                    showConfirmButton: false,
-                    timer: 1500
-                  });
-                  vaciarCarrito();
+                    Swal.fire({
+                        position: 'top-center',
+                        icon: 'success',
+                        title: 'La compra fue realizada con exito!',
+                        showConfirmButton: false,
+                        timer: 2000
+                    });
+                
+                vaciarCarrito();
             });
 
             cargarCarritoDeLocalStorage();
