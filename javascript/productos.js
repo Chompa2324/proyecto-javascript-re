@@ -168,6 +168,7 @@ let carrito = [];
             DOMbotonVaciar.addEventListener('click', vaciarCarrito);
             
             DOMbotonEnviar.addEventListener('click', ()=>{
+                if (localStorage.getItem('carrito')){
                     Swal.fire({
                         position: 'top-center',
                         icon: 'success',
@@ -177,6 +178,14 @@ let carrito = [];
                     });
                 
                 vaciarCarrito();
+                }else{
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Algo anda mal.',
+                        text: 'No se han encontrado articulos en el carrito!',
+                    });
+                }  
+                
             });
 
             cargarCarritoDeLocalStorage();

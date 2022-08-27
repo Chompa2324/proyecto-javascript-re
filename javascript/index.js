@@ -42,10 +42,62 @@ Swal.fire(
 )
 
 
+    //AJAX - Fetch de Seccion La Saga---------------------------------------------------------
+    const videogames = document.getElementById("videojuegos");
+
+    fetch('./json/videogames.json')
+        .then((response) => response.json())
+        .then((data) => {
+            data.forEach(elemento => {
+                const section = document.createElement('section');
+                section.classList.add('about')
+                const div = document.createElement('div');
+                section.append(div)
+                const img = document.createElement('img');
+                const parrafo = document.createElement('p');
+    
+                if (elemento.id % 2 === 0) img.classList.add('imagen-seccion2');
+                else img.classList.add('imagen-seccion');
+                img.src = elemento.imagen;
+                parrafo.classList.add('parrafo-2');
+                parrafo.innerText = elemento.descripcion;
+    
+                div.append(img);
+                div.append(parrafo);
+    
+    
+                videogames.append(section);
+            });
+        })
+
+
+//AJAX - Fetch Lista de Personajes------------------------------------------------------------
+const tbody = document.getElementById("tabla");
+
+fetch('./json/tabla.json')
+    .then((response) => response.json())
+    .then((data) => {
+        data.forEach(elemento =>{
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+            
+            <th scope="row">${ elemento.id }</th>
+                <td>${ elemento.nombre }</td>
+                <td>${ elemento.nacionalidad }</td>
+                <td>${ elemento.edad }</td>
+            
+                `;
+            
+                tabla.append(tr);
+        });
+
+    })
+
+
 //AJAX - Fetch seccion Enemigos en el proyecto-------------------------------------
 const history = document.getElementById("history");
 
-fetch('./data.json')
+fetch('./json/data.json')
     .then((response) => response.json())
     .then((data) => {
         data.forEach(elemento => {
@@ -57,67 +109,6 @@ fetch('./data.json')
             <hr/>
             `;
             history.append(li);
-        });
-    })
-
-
-    //Fetch de Seccion La Saga---------------------------------------------------------
-const videogames = document.getElementById("videojuegos");
-
-fetch('./videogames.json')
-    .then((response) => response.json())
-    .then((data) => {
-        data.forEach(elemento => {
-            const section = document.createElement('section');
-            section.classList.add('about')
-            const div = document.createElement('div');
-            section.append(div)
-            const img = document.createElement('img');
-            const parrafo = document.createElement('p');
-
-            if (elemento.id % 2 === 0) img.classList.add('imagen-seccion2');
-            else img.classList.add('imagen-seccion');
-            img.src = elemento.imagen;
-            parrafo.classList.add('parrafo-2');
-            parrafo.innerText = elemento.descripcion;
-
-            div.append(img);
-            div.append(parrafo);
-
-
-            videogames.append(section);
-        });
-    })
-
-
-    //Fetch Lista de Personajes------------------------------------------------------------
-const tbody = document.getElementById("tabla");
-
-fetch('./tabla.json')
-    .then((response) => response.json())
-    .then((data) => {
-        data.forEach(elemento => {
-            const tr = document.createElement('tr');
-            const th = document.createElement('th');
-
-            const td1 = document.createElement('td');
-            const td2 = document.createElement('td');
-            const td3 = document.createElement('td');
-
-            th.scope('row')
-            th.innerText = elemento.id;
-            tr.append(th)
-
-            td1.innerText = elemento.nombre;
-            tr.append(td1)
-
-            td2.innerText = elemento.nacionalidad;
-            tr.append(td2)
-
-            td3.innerText = elemento.edad;
-            tr.append(td3)
-
-            tbody.append(tr)
         });
     })
 
